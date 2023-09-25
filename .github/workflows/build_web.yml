@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build the hello-docker Docker image
         run: |
-          echo ${{ secrets.DOCKER_PASS }} | docker login ghcr.io -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
+          echo ${{ secrets.DOCKER_PASS }} | docker login docker.io -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
           docker build . --tag vgoroshenko/the-internet-demo:latest
           docker push vgoroshenko/the-internet-demo:latest
