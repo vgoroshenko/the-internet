@@ -15,5 +15,4 @@ jobs:
       - name: Build the hello-docker Docker image
         run: |
           docker build . --tag ghcr.io/vgoroshenko/the-internet-demo:latest
-          docker run ghcr.io/vgoroshenko/the-internet-demo:latest
           docker push ghcr.io/vgoroshenko/the-internet-demo:latest
