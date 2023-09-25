@@ -3,6 +3,8 @@ FROM ruby:2.7.2
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
 WORKDIR /app
+ENV BUNDLER_VERSION=2.3.24
+RUN gem install bundler:2.3.24
 RUN bundle install
 ADD . /app
 
