@@ -7,9 +7,6 @@ Deployed and available at [http://the-internet.herokuapp.com](http://the-interne
 
 ## Available Examples:
 
-
-test
-
 + [A/B Testing](http://the-internet.herokuapp.com/abtest)
 + [Add/Remove Elements](http://the-internet.herokuapp.com/add_remove_elements/)
 + [Basic Auth](http://the-internet.herokuapp.com/basic_auth) (user and pass: admin)
