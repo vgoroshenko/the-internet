@@ -7,12 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: docker.io
-          username: ${{ secrets.DOCKER_LOGIN }}
-          password: ${{ secrets.DOCKER_PASS }}
+#        uses: docker/login-action@v1
+#        with:
+#          registry: docker.io
+#          username: ${{ secrets.DOCKER_LOGIN }}
+#          password: ${{ secrets.DOCKER_PASS }}
       - name: Build the hello-docker Docker image
         run: |
           docker build . --tag vgoroshenko/the-internet-demo:latest
+          docker login docker.io -u ${{ secrets.DOCKER_LOGIN }} -p ${{ secrets.DOCKER_PASS }}
           docker push vgoroshenko/the-internet-demo:latest
